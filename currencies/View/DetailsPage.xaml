@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="currencies.View.DetailsPage"
+             xmlns:viewmodel ="clr-namespace:currencies.ViewModel"
+             x:DataType="viewmodel:CurrenciesDetailsViewModel"
+             Title="{Binding Cur.Name}">
+    <ScrollView>
+        <VerticalStackLayout>
+            <Grid ColumnDefinitions="*, Auto, *"
+                  RowDefinitions="160, Auto" >
+
+                <BoxView BackgroundColor="{StaticResource newDark}"
+                         Grid.ColumnSpan="3"
+                         HeightRequest="160"
+                         HorizontalOptions="FillAndExpand" />
+
+                <Frame Grid.RowSpan="2"
+                       Grid.Column="1"
+                       HeightRequest="180"
+                       WidthRequest="350"
+                       CornerRadius="5"
+                       IsClippedToBounds="True"
+                       HorizontalOptions="Center"
+                       HasShadow="True"
+                       Padding="0"
+                       Margin="0,30,0,0">
+
+                    <Image Aspect="AspectFill"
+                           HeightRequest="170"
+                           WidthRequest="340"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center"
+                           Source="{}" />
+                </Frame>
+            </Grid>
+
+            <VerticalStackLayout Padding="10" Spacing="10">
+                <Label Text="{Binding Cur.symbol}"
+                       Style="{StaticResource LargeLabel}"
+                       HorizontalOptions="Center"/>
+                <Label Text="{Binding Cur.code, StringFormat='Code: {0}'}" Style="{StaticResource MediumLabel}" />
+                <Label Text="{Binding Cur.name, StringFormat='Name: {0}'}" Style="{StaticResource SmallLabel}"/>
+                <Label Text="{Binding Cur.shortname, StringFormat='Short Name: {0}'}" Style="{StaticResource SmallLabel}" />
+                <Label Text="Plot :"
+                       Style="{StaticResource MediumLabel}"/>
+                <Label Text="{Binding Cur.decimals}" Style="{StaticResource SmallLabel}"/>
+                <Label Text="Previews: " 
+                       Style="{StaticResource MediumLabel}"/>
+            </VerticalStackLayout>
+
+            <Grid RowDefinitions="Auto, Auto"
+                  ColumnDefinitions="*,*">
+                <Frame Grid.Row="0"
+                       Grid.Column="0"
+                       Style="{StaticResource CardView}"
+                       Margin="8">
+
+                    <Image Aspect="AspectFit"
+                           HeightRequest="150"
+                           WidthRequest="150"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center"
+                           Source="{}" />
+
+                </Frame>
+                <Frame Grid.Row="0"
+                       Grid.Column="1"
+                       Style="{StaticResource CardView}"
+                       Margin="8">
+
+                    <Image Aspect="AspectFit"
+                           HeightRequest="150"
+                           WidthRequest="150"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center"
+                           Source="{}" />
+
+                </Frame>
+                <Frame Grid.Row="1"
+                       Grid.Column="0"
+                       Style="{StaticResource CardView}"
+                       Margin="8">
+
+                    <Image Aspect="AspectFit"
+                           HeightRequest="150"
+                           WidthRequest="150"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center"
+                           Source="{}" />
+                </Frame>
+                <Frame Grid.Row="1"
+                       Grid.Column="1"
+                       Style="{StaticResource CardView}"
+                       Margin="8">
+
+
+                    <Image Aspect="AspectFit"
+                           HeightRequest="150"
+                           WidthRequest="150"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center"
+                           Source="{}" />
+                </Frame>
+            </Grid>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
