@@ -4,7 +4,7 @@
              x:Class="currencies.View.DetailsPage"
              xmlns:viewmodel ="clr-namespace:currencies.ViewModel"
              x:DataType="viewmodel:CurrenciesDetailsViewModel"
-             Title="{Binding Cur.Name}">
+             Title="{Binding Currency.name}">
     <ScrollView>
         <VerticalStackLayout>
             <Grid ColumnDefinitions="*, Auto, *"
@@ -26,25 +26,19 @@
                        Padding="0"
                        Margin="0,30,0,0">
 
-                    <Image Aspect="AspectFill"
-                           HeightRequest="170"
-                           WidthRequest="340"
-                           HorizontalOptions="Center"
-                           VerticalOptions="Center"
-                           Source="{}" />
+
                 </Frame>
             </Grid>
 
             <VerticalStackLayout Padding="10" Spacing="10">
-                <Label Text="{Binding Cur.symbol}"
-                       Style="{StaticResource LargeLabel}"
+                <Label Text="{Binding Currency.symbol}"Style="{StaticResource LargeLabel}"
                        HorizontalOptions="Center"/>
-                <Label Text="{Binding Cur.code, StringFormat='Code: {0}'}" Style="{StaticResource MediumLabel}" />
-                <Label Text="{Binding Cur.name, StringFormat='Name: {0}'}" Style="{StaticResource SmallLabel}"/>
-                <Label Text="{Binding Cur.shortname, StringFormat='Short Name: {0}'}" Style="{StaticResource SmallLabel}" />
+                <Label Text="{Binding Currency.code, StringFormat='Code: {0}'}" Style="{StaticResource MediumLabel}" />
+                <Label Text="{Binding Currency.name, StringFormat='Name: {0}'}" Style="{StaticResource SmallLabel}"/>
+                <Label Text="{Binding Currency.shortName, StringFormat='Short Name: {0}'}" Style="{StaticResource SmallLabel}" />
                 <Label Text="Plot :"
                        Style="{StaticResource MediumLabel}"/>
-                <Label Text="{Binding Cur.decimals}" Style="{StaticResource SmallLabel}"/>
+                <Label Text="{Binding Currency.decimals}" Style="{StaticResource SmallLabel}"/>
                 <Label Text="Previews: " 
                        Style="{StaticResource MediumLabel}"/>
             </VerticalStackLayout>
@@ -56,12 +50,8 @@
                        Style="{StaticResource CardView}"
                        Margin="8">
 
-                    <Image Aspect="AspectFit"
-                           HeightRequest="150"
-                           WidthRequest="150"
-                           HorizontalOptions="Center"
-                           VerticalOptions="Center"
-                           Source="{}" />
+                  
+
 
                 </Frame>
                 <Frame Grid.Row="0"
@@ -69,12 +59,7 @@
                        Style="{StaticResource CardView}"
                        Margin="8">
 
-                    <Image Aspect="AspectFit"
-                           HeightRequest="150"
-                           WidthRequest="150"
-                           HorizontalOptions="Center"
-                           VerticalOptions="Center"
-                           Source="{}" />
+     
 
                 </Frame>
                 <Frame Grid.Row="1"
@@ -82,12 +67,8 @@
                        Style="{StaticResource CardView}"
                        Margin="8">
 
-                    <Image Aspect="AspectFit"
-                           HeightRequest="150"
-                           WidthRequest="150"
-                           HorizontalOptions="Center"
-                           VerticalOptions="Center"
-                           Source="{}" />
+
+
                 </Frame>
                 <Frame Grid.Row="1"
                        Grid.Column="1"
@@ -95,12 +76,7 @@
                        Margin="8">
 
 
-                    <Image Aspect="AspectFit"
-                           HeightRequest="150"
-                           WidthRequest="150"
-                           HorizontalOptions="Center"
-                           VerticalOptions="Center"
-                           Source="{}" />
+
                 </Frame>
             </Grid>
 

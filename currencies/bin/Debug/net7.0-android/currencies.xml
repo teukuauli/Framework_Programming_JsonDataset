@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>currencies</name>
+    </assembly>
+    <members>
+        <member name="P:currencies.ViewModel.BaseViewModel.IsBusy">
+            <inheritdoc cref="F:currencies.ViewModel.BaseViewModel.isBusy"/>
+        </member>
+        <member name="P:currencies.ViewModel.BaseViewModel.Title">
+            <inheritdoc cref="F:currencies.ViewModel.BaseViewModel.title"/>
+        </member>
+        <member name="P:currencies.ViewModel.CurrenciesDetailsViewModel.Cur">
+            <inheritdoc cref="F:currencies.ViewModel.CurrenciesDetailsViewModel.cur"/>
+        </member>
+        <member name="F:currencies.ViewModel.CurrenciesDetailsViewModel.goBackCommand">
+            <summary>The backing field for <see cref="P:currencies.ViewModel.CurrenciesDetailsViewModel.GoBackCommand"/>.</summary>
+        </member>
+        <member name="P:currencies.ViewModel.CurrenciesDetailsViewModel.GoBackCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:currencies.ViewModel.CurrenciesDetailsViewModel.GoBackAsync"/>.</summary>
+        </member>
+        <member name="P:currencies.ViewModel.CurrenciesViewsModel.IsRefreshing">
+            <inheritdoc cref="F:currencies.ViewModel.CurrenciesViewsModel.isRefreshing"/>
+        </member>
+        <member name="F:currencies.ViewModel.CurrenciesViewsModel.gotoDetailsASyncCommand">
+            <summary>The backing field for <see cref="P:currencies.ViewModel.CurrenciesViewsModel.GotoDetailsASyncCommand"/>.</summary>
+        </member>
+        <member name="P:currencies.ViewModel.CurrenciesViewsModel.GotoDetailsASyncCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:currencies.ViewModel.CurrenciesViewsModel.GotoDetailsASync(currencies.Services.Currency)"/>.</summary>
+        </member>
+        <member name="F:currencies.ViewModel.CurrenciesViewsModel.getCurCommand">
+            <summary>The backing field for <see cref="P:currencies.ViewModel.CurrenciesViewsModel.GetCurCommand"/>.</summary>
+        </member>
+        <member name="P:currencies.ViewModel.CurrenciesViewsModel.GetCurCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:currencies.ViewModel.CurrenciesViewsModel.GetCurAsync"/>.</summary>
+        </member>
+    </members>
+</doc>

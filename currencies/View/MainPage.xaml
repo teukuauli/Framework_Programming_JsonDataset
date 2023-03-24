@@ -6,7 +6,7 @@
             xmlns:viewmodel="clr-namespace:currencies.ViewModel"
             xmlns:ios="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;assembly=Microsoft.Maui.Controls"
             ios:Page.UseSafeArea="True"
-            Title="Currencies"
+            Title="Currency"
             x:DataType= "viewmodel:CurrenciesViewsModel">
 
     <Grid ColumnDefinitions="*,*"
@@ -14,10 +14,10 @@
           RowDefinitions="*,Auto">
 
         <RefreshView Grid.ColumnSpan="2"
-                     Command="{Binding GetCurCommand}"
+                     Command="{Binding GetCurrencyCommand}"
                      IsRefreshing="{Binding IsRefreshing}">
             <CollectionView Background="Transparent"                         
-                            ItemsSource="{Binding Cur}"
+                            ItemsSource="{Binding Currency}"
                             SelectionMode="None">
                 <CollectionView.EmptyView>
                     <StackLayout VerticalOptions="Center"
@@ -28,19 +28,19 @@
                                HorizontalOptions="CenterAndExpand"
                                VerticalOptions="CenterAndExpand"
                                Aspect="AspectFill"/>
-                        <Label Text="Click Get Movies to see list of movies!"
+                        <Label Text="Currencies Around The World!"
                                HorizontalOptions="Fill"/>
                     </StackLayout>
                 </CollectionView.EmptyView>
                 <CollectionView.ItemTemplate>
-                    <DataTemplate x:DataType="model:Cur">
+                    <DataTemplate x:DataType="model:Currency">
                         <Grid Padding="10">
                             <Frame HeightRequest="125"
                                    Padding="0"
                                    Style="{StaticResource CardView}">
                                 <Frame.GestureRecognizers>
                                     <TapGestureRecognizer CommandParameter="{Binding .}"
-                                                          Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:CurrenciesViewsmodel}}, Path=GotoDetailsASyncCommand}" />
+                                                          Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:CurrenciesViewsModel}}, Path=GotoDetailsASyncCommand}" />
                                 </Frame.GestureRecognizers>
                                 <Grid Padding="0"
                                       ColumnDefinitions="125, *">
@@ -52,10 +52,10 @@
                                     <VerticalStackLayout Grid.Column="1"
                                                          Padding="10"
                                                          VerticalOptions="Start">
-                                        <Label Text="{Binding Name}" Style="{StaticResource LargeLabel}"/>
-                                        <Label Text="{Binding Manager}"  Style="{StaticResource MediumLabel}"/>
-                                        <Label Text="{Binding Stadium}" Style="{StaticResource SmallLabel}"/>
-                                        <Label Text="{Binding Code}" Style="{StaticResource SmallLabel}"/>
+                                        <Label Text="{Binding symbol}" Style="{StaticResource LargeLabel}"/>
+                                        <Label Text="{Binding name}"  Style="{StaticResource MediumLabel}"/>
+                                        <Label Text="{Binding decimals}" Style="{StaticResource SmallLabel}"/>
+                                        <Label Text="{Binding code}" Style="{StaticResource SmallLabel}"/>
 
                                     </VerticalStackLayout>
                                 </Grid>
@@ -67,9 +67,9 @@
             </CollectionView>
         </RefreshView>
 
-        <Button Text="Get Teams"
+        <Button Text="Click me!"
                 Style="{StaticResource ButtonOutline}"
-                Command="{Binding GetCurCommand}"
+                Command="{Binding GetCurrencyCommand}"
                 IsEnabled="{Binding isNotBusy}"
                 HorizontalOptions="Center"
                 Grid.ColumnSpan="2"

@@ -11,5 +11,6 @@ namespace currencies.Model
         public string shortName { get; set; }
         public int decimals { get; set; }
         public string symbol { get; set; }
+        public string Image { get; set; }
     }
 }

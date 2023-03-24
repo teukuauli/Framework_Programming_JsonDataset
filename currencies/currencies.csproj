@@ -80,8 +80,6 @@
 	  <Content Include="Resources\Raw\currencies.json" />
 	</ItemGroup>
 	<ItemGroup>
-		<Folder Include="Model\" />
 		<Folder Include="View\" />
-		<Folder Include="Services\" />
 	</ItemGroup>
 </Project>

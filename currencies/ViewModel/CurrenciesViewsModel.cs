@@ -37,7 +37,7 @@ public partial class CurrenciesViewsModel : BaseViewModel
     }
 
     [RelayCommand]
-    async Task GetEplAsync()
+    async Task GetCurAsync()
     {
         if (IsBusy) return;
 

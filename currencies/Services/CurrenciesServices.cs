@@ -15,7 +15,7 @@ public class CurService
     {
         if (curList?.Count > 0) return curList;
 
-        var url = "https://github.com/Erlangga28/Assignment-Framework-AppsWithJSON/blob/main/EplTeams/Resources/Raw/epldata.json";
+        var url = "https://github.com/teukuauli/Framework_Programming_JsonDataset/blob/main/currencies/Resources/Raw/currencies.json";
 
         var response = await httpClient.GetAsync(url);
 
